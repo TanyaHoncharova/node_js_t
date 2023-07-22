@@ -14,18 +14,18 @@ GET /api/users/:id: Fetch a specific user by ID.
 Request parameter: id (string) - The unique identifier of the user.
 Response: JSON object representing the user with the specified ID.
 
-### POST /api/users: Create a new user with the provided data.
+### POST /api/users : Create a new user with the provided data.
 
 Request body: JSON object containing the user data (name, email, age).
 Response: JSON object representing the newly created user.
 
-### PUT /api/users/:id: Update an existing user by ID with the provided data.
+### PUT /api/users/*:id* : Update an existing user by ID with the provided data.
 
 Request parameter: id (string) - The unique identifier of the user to be updated.
 Request body: JSON object containing the updated user data (name, email, age).
 Response: JSON object representing the updated user.
 
-### DELETE /api/users/:id: Delete a user by ID.
+### DELETE /api/users/*:id* : Delete a user by ID.
 
 Request parameter: id (string) - The unique identifier of the user to be deleted.
 Response: JSON object with a success message indicating the user was deleted successfully.
@@ -43,8 +43,11 @@ Add the following environment variables to the .env file:
 makefile
 ### Copy code
 DB_HOST=your_database_host
+
 DB_USER=your_database_username
+
 DB_PASSWORD=your_database_password
+
 DB_DATABASE=your_database_name
 
 Run the database migrations using npm run migrate.
@@ -59,6 +62,9 @@ Automated tests will be executed, and results will be displayed.
 
 ## Environment Variables
 DB_HOST: The hostname or IP address of the MySQL database.
+
 DB_USER: The username for connecting to the MySQL database.
+
 DB_PASSWORD: The password for connecting to the MySQL database.
+
 DB_DATABASE: The name of the MySQL database.
