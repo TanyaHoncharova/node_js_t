@@ -30,7 +30,8 @@ const addUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
       const {id} =req.params;
-      const result = await users.updateUser(id, req.body);
+      const [result] = await users.updateUser(id, req.body);
+  
       if(!result){
         throw HttpError(404, "Not found")
       }

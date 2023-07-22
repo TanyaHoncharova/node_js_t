@@ -27,7 +27,7 @@ const addUser = async (data) => {
     age,
   ]);
   const user = await getUserById(id);
-  console.log('user', user)
+
   return user
 }
 
@@ -36,7 +36,8 @@ const updateUser = async (id, body) => {
     email,
     age,
     } = body;
-    
+    const userToUpdate =  await getUserById(id);
+    if(!userToUpdate){ return null} 
     const [result] = await pool.execute('UPDATE users SET name = ?, email = ?, age = ? WHERE id = ?', [
       name,
       email,
@@ -44,7 +45,6 @@ const updateUser = async (id, body) => {
     id
     ]);
     const user = await getUserById(id) 
-
     return user
 }
 
