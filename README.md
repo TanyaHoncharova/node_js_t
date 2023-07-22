@@ -1,32 +1,32 @@
-# ** Simple Users API **
+# **Simple Users API**
 
-## *** Description *** 
+## **Description** 
 This project is a RESTful API that allows users to manage a user database. It provides endpoints to perform CRUD (Create, Read, Update, Delete) operations on user data. The application is built using Node.js, Express.js, and a MySQL database.
 
 ## API Description
 ## API Endpoints:
 
-### GET /api/users: ** Fetch all users from the database.**
+### GET /api/users: *Fetch all users from the database.*
 
 Response: JSON array of user objects.
 
-GET /api/users/*:id* : Fetch a specific user by ID.
+GET /api/users/*:id* : *Fetch a specific user by ID*.
 
 Request parameter: id (string) - The unique identifier of the user.
 Response: JSON object representing the user with the specified ID.
 
-### POST /api/users : ** Create a new user with the provided data.**
+### POST /api/users : *Create a new user with the provided data.*
 
 Request body: JSON object containing the user data (name, email, age).
 Response: JSON object representing the newly created user.
 
-### PUT /api/users/*:id* : ** Update an existing user by ID with the provided data. **
+### PUT /api/users/*:id* : *Update an existing user by ID with the provided data.*
 
 Request parameter: id (string) - The unique identifier of the user to be updated.
 Request body: JSON object containing the updated user data (name, email, age).
 Response: JSON object representing the updated user.
 
-### DELETE /api/users/*:id* : ** Delete a user by ID.**
+### DELETE /api/users/*:id* : *Delete a user by ID.*
 
 Request parameter: id (string) - The unique identifier of the user to be deleted.
 Response: JSON object with a success message indicating the user was deleted successfully.
