@@ -26,7 +26,7 @@ describe('Users API', () => {
   }, 10000);
 
   it('should get a user by ID', async () => {
-    const userId = '159L7KStk-oWQMYXwgIyr';
+    const userId = 'AeHIrLTr6JkxGE6SN-0Rw';
     const response = await request(app).get(`/api/users/${userId}`);
 
     expect(response.status).toBe(200);
@@ -34,7 +34,7 @@ describe('Users API', () => {
   });
 
   it('should update a user', async () => {
-    const userId = '9_X3SDvSlg4vha0ZR96qu';
+    const userId = 'qdggE76Jtbfd9eWJHrssH';
     const response = await request(app)
       .put(`/api/users/${userId}`)
       .send({ name: 'Updated Name', email: 'updated.email@example.com', age: 35 });
@@ -47,7 +47,7 @@ describe('Users API', () => {
 
   it('should delete a user', async () => {
    
-    const userId = 'BI33cuT0KWqWfaRIufKxH';
+    const userId = 'xAke5ksDKbomzWe9yZRyf';
     const response = await request(app).delete(`/api/users/${userId}`);
 
     expect(response.status).toBe(200);
